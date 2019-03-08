@@ -1,3 +1,12 @@
+/*Fonts*/
+
+@font-face {
+  font-family: "break glass";
+  src:url("../fonts/BrokenGlass.ttf") format("truetype");
+ }
+
+
+
 *
 {
   box-sizing: border-box;
@@ -7,11 +16,21 @@
 }
 
 header {
+  padding:20px 20px 0 20px;
   height: 100vh;
-  background: gold;
+  background-image: url('../img/img_header.jpg');
+  background-position:center;
+  background-size:230vw 100vh;
+  
 
   h1 {
+    padding:10px 20px 10px 20px;
+    background-color: rgba(253, 94, 49, 0.596);
+    border-bottom: solid ;
+    border-top:solid ;
     text-align: center;
-    font-size: 50px;
+    font-size: 3.5rem;
+    font-family: "break glass";
+    font-weight: lighter;
   }
 }
