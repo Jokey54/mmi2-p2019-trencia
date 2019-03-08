@@ -1,0 +1,16 @@
+/*Fonts*/
+
+@font-face {
+    font-family: "break glass";
+    src:url("../fonts/BrokenGlass.otf") format("opentype"),
+    url("../fonts/BrokenGlass.ttf") format("truetype");
+   }
+  
+  @font-face {
+    font-family: "Outrunfuture";
+    src:url("../fonts/Outrunfuture.otf") format("opentype");
+   }
+
+   
+$primary_font: "break glass";
+$secondary_font:"Outrunfuture";
