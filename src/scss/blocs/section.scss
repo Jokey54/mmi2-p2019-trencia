@@ -16,7 +16,10 @@
     font-family: $secondary_font;
     font-weight: lighter;
     font-size:1.25rem;
-    text-shadow: 3px 3px black;
+    text-shadow: 5px 3px 3px black;
+    @include medium {
+        font-size:2rem;
+    }
 }
 
 .section__background
@@ -27,7 +30,15 @@
     left:-50%;
     z-index: -1;
     overflow: hidden;
+    @include medium {
+        bottom:0;
+        width: 100%;
+    }
 }
+
+.first {
+
+
 
 .article
 {
@@ -36,12 +47,19 @@ margin-top: 15px;
 display: flex;
 flex-direction: column;
 align-items: center;
+@include medium {
+    margin-top:20px;
+    flex-direction: row;
+}
 }
 
 .article__image{
     margin:5px 20px 10px 20px;
-    box-shadow: 5px 5px 5px black;
+    box-shadow: 6px 6px 3px black;
     width: 80%;
+    @include medium {
+        width: 50%;
+    }
 }
 
 
@@ -56,6 +74,18 @@ align-items: center;
     border-bottom: solid 5px ;
     border-top:solid 5px ;
     font-family: $description_font,sans-serif;
+    @include medium {
+        margin-right: 15px;
+        display: flex;
+        align-items:center;
+        height: 100%;
+        font-size: 1.5rem;
+        border-bottom: solid 5px ;
+        border-top:solid 5px;
+        background-color: transparent;
+
+    }
     
     
+}
 }
