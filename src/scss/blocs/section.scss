@@ -108,6 +108,7 @@ align-items: center;
     display:flex;
     flex-direction:column;
     align-items: center;
+    
 
     .section__title
     {
@@ -117,12 +118,28 @@ align-items: center;
 
     .section__grid
     {
+        
         margin:10px 0 10px 0;
         display: grid;
         grid-template-columns: repeat(2,50%);
+        grid-template-rows: repeat(3,85px);
+        @include medium {
+            grid-template-columns: repeat(5,20%);
+        }
+        
     }
+
+    .grid__img-medium
+    {
+        display: none;
+        @include medium {
+            display: inline-block;
+        }
+    }
+
     .section__grid-img
     {
+        width: 100%;
         margin: 5px 0  5px 0;
     }
 }
