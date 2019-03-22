@@ -103,11 +103,15 @@ align-items: center;
 
 // Second section
 
-.second-1{
+.second{
     background:linear-gradient(rgba(61,17,0,1) 35%, $primary_color 100%);
     display:flex;
     flex-direction:column;
     align-items: center;
+
+    @include medium{
+        
+    }
     
 
     .section__title
@@ -128,6 +132,35 @@ align-items: center;
         }
         
     }
+
+    .div__h2,.div__p
+    {
+        display:none;
+        @include medium {
+            display:block;
+            font-family: $description_font;
+            color:$text_color;
+        }
+    }
+
+    .div__h2{
+        font-size:1.5rem;
+        margin-bottom: 5px;
+    }
+    .div__p{
+        font-size: 1.25rem;
+    }
+
+
+    .section__div
+    {
+        @include medium{
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+        }
+    }
+
 
     .grid__img-medium
     {
