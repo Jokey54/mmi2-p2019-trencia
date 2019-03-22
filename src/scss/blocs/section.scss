@@ -5,7 +5,7 @@
     padding:10px 0 0 0;
     background:linear-gradient($primary_color 65%,rgba(61,17,0,1) 100%);
     position:relative;
-    z-index: -2;
+    
 }
 
 .section__title
@@ -15,11 +15,16 @@
     padding:0 10px 0 10px;
     font-family: $secondary_font;
     font-weight: lighter;
-    font-size:1.25rem;
+    font-size:1.5rem;
     text-shadow: 5px 3px 3px black;
     @include medium {
         font-size:2rem;
     }
+}
+
+.hidden {
+    opacity:0;
+    z-index: -5;
 }
 
 .section__background
@@ -39,6 +44,7 @@
 // First Section
 
 .first {
+    z-index: -2;
 
 
 
@@ -174,5 +180,61 @@ align-items: center;
     {
         width: 100%;
         margin: 5px 0  5px 0;
+    }
+}
+
+.third
+{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    .section__h2
+    {
+        font-family: $description_font;
+        font-size: 1.25rem;
+    }
+
+    .section__img{
+        height: 15%;
+    }
+
+
+
+
+    .section__popup
+    {
+        z-index:99;
+        opacity:1;
+        transition: all 1s ease;
+        position:absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height:100%;
+        background-color:white;
+    }
+
+    .hidden {
+        opacity:0;
+        z-index: -5;
+    }
+
+    [data-caps="1"]+div
+    {
+        background-color: #c012d0;
+    }
+    [data-caps="2"]+div
+    {
+        background-color: #ae1010;
+    }
+    [data-caps="3"]+div
+    {
+        background-color: #1133ff ;
+    }
+    [data-caps="4"]+div
+    {
+        background-color: #0ac70a;
     }
 }
