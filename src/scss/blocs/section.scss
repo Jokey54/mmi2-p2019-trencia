@@ -5,6 +5,9 @@
     padding:10px 0 0 0;
     background:linear-gradient($primary_color 65%,rgba(61,17,0,1) 100%);
     position:relative;
+    @include large {
+        z-index:3;
+    }
     
 }
 
@@ -44,7 +47,9 @@
 
 .first {
     z-index: -2;
-
+    @include medium {
+        z-index:3;
+    }
 
 
 .article
@@ -63,6 +68,7 @@ align-items: center;
     }
 }
 @include large {
+    z-index:5;
     justify-content: space-between;
     margin : 15px 5% 0 5%;
 }
@@ -131,7 +137,7 @@ align-items: center;
     
 
     @include large{
-        z-index: -4;
+        z-index:0;
         padding: 0 0 0 0;
     }
     
@@ -159,10 +165,12 @@ align-items: center;
             width: 60%;
             margin: 5px 0px 5px 0px;
             grid-template-rows: repeat(3,102px);
+            z-index:10;
         }
         @include Ultralarge{
             margin:25px 0 25px 0;
             grid-template-rows: repeat(3,115px);
+            z-index:10;
         }
     }
 
@@ -195,6 +203,22 @@ align-items: center;
         }
     }
 
+    .section__grid-img
+    {
+        width: 100%;
+        margin: 5px 0  5px 0;
+        @include large{
+           width: 90%;
+          transition: all .2s;
+         
+        }
+    }
+
+    .section__grid-img:hover
+    {
+        transform: scale(1.5);
+        
+    }
 
     .grid__img-medium
     {
@@ -204,23 +228,19 @@ align-items: center;
         }
     }
 
-    .section__grid-img
-    {
-        width: 100%;
-        margin: 5px 0  5px 0;
-        @include large{
-           width: 90%;
-        }
-    }
+
 
 
     .section__background1,.section__background2{
         display:none;
-        z-index: -3;
+        z-index: 1;
         @include large {
         display:inline-block;
         width: 55%;
         position:absolute;
+        overflow: hidden;
+        
+
                   
         }
     }
@@ -249,6 +269,8 @@ align-items: center;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+
+
     .section__h2
     {
         font-family: $description_font;
@@ -352,3 +374,5 @@ align-items: center;
         background-color: #0ac70a;
     }
 }
+
+
