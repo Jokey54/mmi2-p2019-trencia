@@ -160,6 +160,10 @@ align-items: center;
             margin: 5px 0px 5px 0px;
             grid-template-rows: repeat(3,102px);
         }
+        @include Ultralarge{
+            margin:50px 0 50px 0;
+            grid-template-rows: repeat(3,132px);
+        }
     }
 
     .div__h2,.div__p
