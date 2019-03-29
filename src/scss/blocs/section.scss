@@ -162,7 +162,7 @@ align-items: center;
         }
         @include Ultralarge{
             margin:50px 0 50px 0;
-            grid-template-rows: repeat(3,132px);
+            grid-template-rows: repeat(3,115px);
         }
     }
 
